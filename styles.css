@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.image {
+    flex: 0 0 40%;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 0 0 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el botón esté en la parte inferior */
+}
+
+.info h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: hsl(217, 19%, 35%);
+    word-wrap: break-word;
+    font-weight: 700;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.info p {
+    margin: 0;
+    font-size: 1em;
+    color: hsl(214, 17%, 51%);
+    word-wrap: break-word;
+    font-weight: 500;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.profile-share-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+    padding: 30px; /* Asegura que el perfil tenga el mismo espaciado que el texto y el título */
+    box-sizing: border-box;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 50px; /* Tamaño de la imagen */
+    height: 50px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.profile div {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 700; /* Peso de fuente Manrope 700 */
+    color: #2c3e50; /* Color del nombre */
+}
+
+.profile h4 {
+    margin: 0;
+    font-size: 0.875em;
+    font-weight: 500; /* Peso de fuente Manrope 500 */
+    color: #6b7280; /* Color de la fecha */
+    display: block; /* Asegura que la fecha esté en una nueva línea */
+}
+
+.share {
+    display: flex;
+    justify-content: flex-end; /* Mueve el botón a la derecha */
+    align-items: center; /* Alinea el botón verticalmente con el contenido del perfil */
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    background-color: hsl(210, 46%, 95%);
+    border: none;
+    border-radius: 50%; /* Hace que el botón sea circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle un efecto 3D */
+    position: relative;
+}
+
+.button::before {
+    content: url('./images/icon-share.svg'); /* Usa la imagen como contenido */
+    width: 24px; /* Ajusta el tamaño de la imagen */
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.attribution a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
