@@ -156,24 +156,22 @@ body {
 {
     display: none;
     position: absolute;
-    top: 0; /* Posiciona el contenido arriba del botón */
+    top: 60px;
     right: 0;
     background-color: hsl(217, 19%, 35%);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    z-index: 1; /* Asegura que el contenido se vea encima del botón */
 }
-.button:active + .share-options {
-    display: block; /* Muestra el contenido cuando se hace clic en el botón */
-  }
-  
-  .share-options a {
+
+.share-options a 
+{
     margin: 0 5px;
-  }
-  
-  .share-options span {
+}
+
+.share-options span 
+{
     color: white;
     font-size: 0.8em;
     font-weight: 500;
-  }
+}
